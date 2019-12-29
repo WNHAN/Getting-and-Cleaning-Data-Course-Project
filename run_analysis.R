@@ -1,9 +1,3 @@
----
-title: "Getting and Cleaning Data Course Project"
-author: "WNH"
-date: "December 27, 2019"
-output: html_document
----
 
 ```{r}
 library(dplyr)
@@ -136,24 +130,9 @@ TidyData <- sub_data %>%
     summarise_all(funs(mean))
 write.table(TidyData, "TidyData.txt")
 ```
-
 ```{r}
 str(TidyData)
 ```
-
 ```{r}
 TidyData
 ```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
-
