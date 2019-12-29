@@ -1,9 +1,3 @@
----
-title: "Getting and Cleaning Data Course Project"
-author: "WNH"
-date: "December 27, 2019"
-output: html_document
----
 
 ```{r}
 library(dplyr)
@@ -61,7 +55,7 @@ activity_labels <- tbl_df(activity_labels)
 tail(activity_labels)
 
 ```
-#The first thing to do is to create a uniform data set out of the available datasets in the site. We #have two datasets for the training data and its corresponding labels, and two datasets for the test #data and its corresponding labels. The following code will combine these datasets and will convert the #label(type of the activity) column into the factor form 
+# to create a uniform data set by two datasets for the training data and its corresponding labels, and two datasets for the test #data and its corresponding labels
 ```{r}
 col_names <- readLines("./UCI HAR Dataset/features.txt")
 colnames(train_data)<-make.names(col_names)
@@ -136,7 +130,7 @@ names(sub_data)<-gsub("gravity", "Gravity", fixed = TRUE,names(sub_data))
 
 head(final_data)
 ```
-#5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+# 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 ```{r}
 TidyData <- sub_data %>%
     group_by(subjectID,activityID) %>%
@@ -152,15 +146,4 @@ str(TidyData)
 print(TidyData)
 ```
 
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
 
