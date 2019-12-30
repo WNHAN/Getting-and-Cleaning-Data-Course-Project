@@ -39,5 +39,5 @@ subject mand its corresponding labels, and thress datasets for the test data, te
 The code assumes all the data is present in the same folder, un-compressed and without names altered.
 
 About variables:
-x_train, y_train, x_test, y_test, subject_train and subject_test contain the data from the downloaded files.
+train_data, train_label, train_subject, test_data, test_label, and test_subject contain the data from the downloaded files.
 train_total, test_total and sub_data merge the previous datasets to further analysis.
